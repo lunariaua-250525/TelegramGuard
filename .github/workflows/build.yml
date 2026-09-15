@@ -22,7 +22,7 @@ jobs:
 
       - name: Extract plugin source
         run: |
-          unzip -o TelegramGuard-Paper-1.21.11.zip
+          unzip -o TelegramGuard-AVALOR-Paper-1.21.11-v1.1.0.zip
 
       - name: Build with Maven
         working-directory: TelegramGuard
