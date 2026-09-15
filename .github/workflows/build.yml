@@ -24,15 +24,13 @@ jobs:
       - name: Extract plugin source
         run: |
           unzip -o TelegramGuard-Paper-1.21.11.zip
-          cd TelegramGuard
-          echo "PROJECT_DIR=$PWD" >> "$GITHUB_ENV"
 
       - name: Build with Maven
-        working-directory: ${{ env.PROJECT_DIR }}
+        working-directory: TelegramGuard
         run: mvn -B clean package
 
       - name: Upload TelegramGuard JAR
         uses: actions/upload-artifact@v4
         with:
           name: TelegramGuard
-          path: ${{ env.PROJECT_DIR }}/target/TelegramGuard.jar
+          path: TelegramGuard/target/TelegramGuard.jar
